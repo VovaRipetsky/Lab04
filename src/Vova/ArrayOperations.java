@@ -4,18 +4,19 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 public class ArrayOperations {
-    private static ArrayList<Integer> c = new ArrayList<>();
-    private static ArrayList<Integer> d = new ArrayList<>();
+
     protected static ArrayList<Integer> existInBoth(ArrayList<Integer> a, ArrayList<Integer> b){
 
+        ArrayList<Integer> same = new ArrayList<>();
         for(int i=0; i<a.size(); i++){
             for(int j=0; j<a.size(); j++){
                 if (a.get(i) == b.get(j)){
-                c.add(a.get(i));
+                same.add(a.get(i));
                 }
             }
         }
-        return c;
+        System.out.println(same.size());
+        return same;
     }
 
     protected static ArrayList<Integer> areUnique(ArrayList<Integer> a, ArrayList<Integer> b){
@@ -44,11 +45,9 @@ public class ArrayOperations {
             }
         }
 
-
+        System.out.println(unique.size());
      return unique;
     }
 
-    protected static void clearArray(){
-        c.clear();
-    }
+
 }
